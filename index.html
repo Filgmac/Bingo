@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bingo Sorteio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h1>B I N G O</h1>
+            <div class="content">
+                <div class="bingo-area">
+                    <div id="currentNumber" class="current-number"></div>
+                    <table class="bingo-table">
+                        <thead>
+                            <tr>
+                                <th>B</th>
+                                <th>I</th>
+                                <th>N</th>
+                                <th>G</th>
+                                <th>O</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bingoNumbers"></tbody>
+                    </table>
+                </div>
+                <div class="called-numbers-area">
+                    <div class="controls">
+                        <button id="drawNumber" class="btn draw-btn">
+                            Sortear Número!
+                        </button>
+                        <button id="resetBoard" class="btn reset-btn">
+                            Zerar Marcações
+                        </button>
+                    </div>
+                    <h3>Números Sorteados:</h3>
+                    <div id="numbers" class="numbers-display"></div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
