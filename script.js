@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         )
         currentNumberDisplay.textContent = `${column}-${drawnNumber}`
 
+        // Exibição dos números sorteados com melhoria para responsividade
         numbersDisplay.innerHTML = calledNumbers
             .map(number => `<span class="called-number">${number}</span>`)
             .join('')
