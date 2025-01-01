@@ -65,10 +65,12 @@ h1 {
   gap: 20px;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .bingo-area {
   flex: 2;
+  width: 100%;
 }
 
 .called-numbers-area {
@@ -105,6 +107,7 @@ h1 {
 /* Bingo Table */
 .bingo-table {
   width: 100%;
+  table-layout: fixed; /* Para garantir que as células se ajustem ao espaço */
   border-collapse: collapse;
   margin: 20px 0;
   background: #1a1a40;
@@ -149,4 +152,77 @@ h1 {
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bingo-area {
+    flex: 1 1 100%;
+  }
+
+  .called-numbers-area {
+    flex: 1 1 100%;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .numbers-display {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .bingo-table th, .bingo-table td {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .bingo-table td {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .current-number {
+    font-size: 2.5rem;
+  }
+
+  .numbers-display {
+    font-size: 1.2rem;
+  }
+
+  .bingo-table th, .bingo-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .bingo-table td {
+    font-size: 1rem;
+    padding: 8px;
+  }
 }
